@@ -15,7 +15,7 @@ v2.config({
 
 // Razorpay configuration
 export const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID|| rzp_test_IKBIG5hmA1fSbO,
+  key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_IKBIG5hmA1fSbO",
   key_secret: process.env.RAZORPAY_SECRET,
 });
 
