@@ -12,13 +12,24 @@ const app = express();
 // Built-In
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(cors())
 // Third-Party
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL],
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
+    
+
+
   })
+  
 );
+
+
 app.use(morgan('dev'));
 app.use(cookieParser());
 
