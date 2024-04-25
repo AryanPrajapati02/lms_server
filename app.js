@@ -44,7 +44,14 @@ import courseRoutes from './routes/course.routes.js';
 import paymentRoutes from './routes/payment.routes.js';
 import miscRoutes from './routes/miscellaneous.routes.js';
 
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the Course Management System');
+});
+
+// Mount all routes
 app.use('/user', userRoutes);
+
 app.use('/api/v1/courses', courseRoutes);
 app.use('/api/v1/payments', paymentRoutes);
 app.use('/api/v1', miscRoutes);
